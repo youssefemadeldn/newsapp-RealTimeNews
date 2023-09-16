@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/models/news_type_model.dart';
 
 class NewsType extends StatelessWidget {
   const NewsType({
     super.key,
+    required this.newsTypeModel,
   });
+  final NewsTypeModel newsTypeModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,15 +17,15 @@ class NewsType extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(7.0),
         color: Colors.black,
-        image: const DecorationImage(
-          image: AssetImage('assets/business.avif'),
+        image: DecorationImage(
+          image: AssetImage(newsTypeModel.image!),
           fit: BoxFit.cover,
         ),
       ),
-      child: const Center(
+      child: Center(
         child: Text(
-          'General',
-          style: TextStyle(
+          newsTypeModel.newsTypeName!,
+          style: const TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
