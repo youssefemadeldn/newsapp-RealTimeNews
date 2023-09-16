@@ -1,5 +1,5 @@
 class NewsTypeModel {
-  final String? name;
+  final String? newsTypeName;
   final String? image;
-  const NewsTypeModel({required this.name, required this.image});
+  const NewsTypeModel({required this.newsTypeName, required this.image});
 }
