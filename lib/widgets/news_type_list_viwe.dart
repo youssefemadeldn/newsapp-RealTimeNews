@@ -39,16 +39,18 @@ class NewsTypeListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      child: ListView.builder(
-        itemCount: newsType.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return NewsType(
-            newsTypeModel: newsType[index],
-          );
-        },
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: 100,
+        child: ListView.builder(
+          itemCount: newsType.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return NewsType(
+              newsTypeModel: newsType[index],
+            );
+          },
+        ),
       ),
     );
   }

@@ -8,8 +8,14 @@ class NewsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemBuilder: (context, index) {
-      return const News();
-    });
+    return SliverToBoxAdapter(
+      child: ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return const News();
+          }),
+    );
   }
 }
