@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/widgets/news_type_list_viwe.dart';
+import 'package:newsapp/widgets/news_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -29,7 +30,10 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: const NewsTypeListView(),
+      body: News(),
     );
   }
 }
+
+
+// const NewsTypeListView(),
