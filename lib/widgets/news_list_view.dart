@@ -8,14 +8,22 @@ class NewsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: ListView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: 10,
-          itemBuilder: (context, index) {
-            return const News();
-          }),
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        (context, index) {
+          return const News();
+        },
+      ),
     );
   }
 }
+
+// SliverToBoxAdapter(
+//       child: ListView.builder(
+//           shrinkWrap: true,
+//           physics: const NeverScrollableScrollPhysics(),
+//           itemCount: 10,
+//           itemBuilder: (context, index) {
+//             return const News();
+//           }),
+//     )
