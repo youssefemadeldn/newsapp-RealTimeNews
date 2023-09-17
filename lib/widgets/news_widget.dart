@@ -26,13 +26,16 @@ class News extends StatelessWidget {
             fontSize: 18,
           ),
         ),
-        const Text(
-          'heloo everu bodhc havd bjw isdbcjsak jbhjc bkasc jqwj kqwbdwiujx iqbwudwq wxqwbwqw xqkbq xqiubq wxi 1wu1bsi d2ldn ',
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(
-            fontSize: 10,
-            color: Colors.grey,
+        const Padding(
+          padding: EdgeInsets.only(bottom: 20),
+          child: Text(
+            'heloo everu bodhc havd bjw isdbcjsak jbhjc bkasc jqwj kqwbdwiujx iqbwudwq wxqwbwqw xqkbq xqiubq wxi 1wu1bsi d2ldn ',
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 10,
+              color: Colors.grey,
+            ),
           ),
         ),
       ],
