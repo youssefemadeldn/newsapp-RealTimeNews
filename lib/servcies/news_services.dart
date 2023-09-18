@@ -13,5 +13,7 @@ class NewsService {
     List<dynamic> articles = jesonData['articles'];
 
     List<NewsModel> articlesList = [];
+
+    for (var article in articles) {}
   }
 }
