@@ -10,6 +10,10 @@ class NewsService {
     // the general structure to receive data from Api
     Map<String, dynamic> jesonData = response.data;
     List<dynamic> articles = jesonData['articles'];
-    print(articles);
+
+    for (var article in articles) {
+      print(article);
+    }
+    // print(articles);
   }
 }
