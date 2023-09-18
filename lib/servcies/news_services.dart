@@ -12,7 +12,7 @@ class NewsService {
     List<dynamic> articles = jesonData['articles'];
 
     for (var article in articles) {
-      print(article);
+      print(article['author']);
     }
     // print(articles);
   }
