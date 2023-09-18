@@ -21,5 +21,6 @@ class NewsService {
           subTitil: article['description']);
       articlesList.add(newsModel);
     }
+    print(articlesList);
   }
 }
