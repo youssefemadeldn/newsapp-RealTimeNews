@@ -12,6 +12,12 @@ class NewsListView extends StatefulWidget {
 
 class _NewsListViewState extends State<NewsListView> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
