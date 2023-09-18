@@ -13,7 +13,12 @@ class NewsService {
     List<dynamic> articles = jesonData['articles'];
 
     List<NewsModel> articlesList = [];
-
-    for (var article in articles) {}
+    // transform list<map> to list<object>
+    for (var article in articles) {
+      NewsModel newsModel = NewsModel(
+          image: article['urlToImage'],
+          title: article['title'],
+          subTitil: article['description']);
+    }
   }
 }

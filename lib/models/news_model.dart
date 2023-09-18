@@ -1,7 +1,7 @@
 class NewsModel {
   final String image;
-  final String titil;
+  final String title;
   final String subTitil;
 
-  NewsModel({required this.image, required this.titil, required this.subTitil});
+  NewsModel({required this.image, required this.title, required this.subTitil});
 }
