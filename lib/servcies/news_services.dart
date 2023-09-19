@@ -19,9 +19,11 @@ class NewsService {
 
       for (var article in articles) {
         NewsModel newsModel = NewsModel(
-            image: article['urlToImage'],
-            title: article['title'],
-            subTitil: article['description']);
+          image: article['urlToImage'],
+          title: article['title'],
+          subTitil: article['description'],
+          urlNews: article['url'],
+        );
         articlesList.add(newsModel);
       }
       // print(articlesList);
