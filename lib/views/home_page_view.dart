@@ -30,12 +30,12 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
         child: CustomScrollView(
           slivers: [
-            const NewsTypeListView(),
-            const SliverToBoxAdapter(
+            NewsTypeListView(),
+            SliverToBoxAdapter(
               child: SizedBox(
                 height: 20,
               ),

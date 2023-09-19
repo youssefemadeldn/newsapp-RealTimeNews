@@ -5,7 +5,7 @@ import 'package:newsapp/servcies/news_services.dart';
 import 'package:newsapp/widgets/news_list_view.dart';
 
 class NewsListViewRequest extends StatefulWidget {
-  NewsListViewRequest({super.key});
+  const NewsListViewRequest({super.key});
 
   @override
   State<NewsListViewRequest> createState() => _NewsListViewRequestState();
