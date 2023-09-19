@@ -30,13 +30,13 @@ class NewsType extends StatelessWidget {
           borderRadius: BorderRadius.circular(7.0),
           color: Colors.black,
           image: DecorationImage(
-            image: AssetImage(newsTypeModel.image!),
+            image: AssetImage(newsTypeModel.image),
             fit: BoxFit.cover,
           ),
         ),
         child: Center(
           child: Text(
-            newsTypeModel.newsTypeName!,
+            newsTypeModel.newsTypeName,
             style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
