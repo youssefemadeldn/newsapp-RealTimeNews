@@ -5,9 +5,10 @@ import 'package:newsapp/widgets/news_widget.dart';
 class NewsListView extends StatelessWidget {
   const NewsListView({
     super.key,
+    required this.articales,
   });
 
-  final List<NewsModel> articales = const [];
+  final List<NewsModel> articales;
 
   @override
   Widget build(BuildContext context) {
