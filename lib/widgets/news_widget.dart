@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/models/news_model.dart';
 
 class News extends StatelessWidget {
-  const News({super.key});
-
+  const News({super.key, required this.newsModel});
+  final NewsModel newsModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,27 +13,27 @@ class News extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
             color: Colors.blueAccent,
-            image: const DecorationImage(
-              image: AssetImage('assets/sports.avif'),
+            image: DecorationImage(
+              image: AssetImage(newsModel.image ?? ''),
               fit: BoxFit.fill,
             ),
           ),
         ),
-        const Text(
-          'heloo everu bodhc havd bjw isdbcjsak jbhjc bkasc jqwj kqwbdwiujx iqbwudwq wxqwbwqw xqkbq xqiubq wxi 1wu1bsi d2ldn ',
+        Text(
+          newsModel.title,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(bottom: 20),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 20),
           child: Text(
-            'heloo everu bodhc havd bjw isdbcjsak jbhjc bkasc jqwj kqwbdwiujx iqbwudwq wxqwbwqw xqkbq xqiubq wxi 1wu1bsi d2ldn ',
+            newsModel.subTitil ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 10,
               color: Colors.grey,
             ),

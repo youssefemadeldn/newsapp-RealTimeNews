@@ -1,4 +1,7 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:newsapp/models/news_model.dart';
+import 'package:newsapp/servcies/news_services.dart';
 import 'package:newsapp/widgets/news_widget.dart';
 
 class NewsListView extends StatefulWidget {
@@ -11,18 +14,22 @@ class NewsListView extends StatefulWidget {
 }
 
 class _NewsListViewState extends State<NewsListView> {
+  List<NewsModel> articales = [];
   @override
-  void initState() {
-    // TODO: implement initState
+  void initState() async {
     super.initState();
+    articales = await NewsService(Dio()).getService();
   }
 
   @override
   Widget build(BuildContext context) {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
+        childCount: articales.length,
         (context, index) {
-          return const News();
+          return News(
+            newsModel: articales[index],
+          );
         },
       ),
     );
