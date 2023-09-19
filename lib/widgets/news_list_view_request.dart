@@ -38,8 +38,12 @@ class _NewsListViewRequestState extends State<NewsListViewRequest> {
                 heightFactor: 14,
                 child: CircularProgressIndicator()),
           )
-        : NewsListView(
-            articales: articles,
-          );
+        : articles.isNotEmpty
+            ? NewsListView(
+                articales: articles,
+              )
+            : const SliverToBoxAdapter(
+                child: Text('oops there an error, try later'),
+              );
   }
 }
