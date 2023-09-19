@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/widgets/news_list_view.dart';
+import 'package:newsapp/widgets/news_list_view_request.dart';
 import 'package:newsapp/widgets/news_type_list_viwe.dart';
 
 class HomePage extends StatelessWidget {
@@ -40,13 +40,14 @@ class HomePage extends StatelessWidget {
                 height: 20,
               ),
             ),
-            NewsListView(),
+            NewsListViewRequest(),
           ],
         ),
       ),
     );
   }
 }
+
 
 
 
