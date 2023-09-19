@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/widgets/news_list_view_request.dart';
 import 'package:newsapp/widgets/news_type_list_viwe.dart';
+import 'package:newsapp/widgets/popular_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,6 +35,7 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
         child: CustomScrollView(
           slivers: [
+            Popular(),
             NewsTypeListView(),
             SliverToBoxAdapter(
               child: SizedBox(
@@ -47,6 +49,7 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
 
 
 
