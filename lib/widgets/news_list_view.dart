@@ -23,6 +23,7 @@ class _NewsListViewState extends State<NewsListView> {
 
   Future<void> getGenralNews() async {
     articales = await NewsService(Dio()).getService();
+    setState(() {});
   }
 
   @override
