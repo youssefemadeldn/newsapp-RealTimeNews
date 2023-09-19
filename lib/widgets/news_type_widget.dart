@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/models/news_type_model.dart';
+import 'package:newsapp/views/news_type_view.dart';
 
 class NewsType extends StatelessWidget {
   const NewsType({
@@ -10,24 +11,36 @@ class NewsType extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 20),
-      width: 160,
-      height: 100,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(7.0),
-        color: Colors.black,
-        image: DecorationImage(
-          image: AssetImage(newsTypeModel.image!),
-          fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return const NewsTypeView();
+            },
+          ),
+        );
+      },
+      child: Container(
+        margin: const EdgeInsets.only(right: 20),
+        width: 160,
+        height: 100,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(7.0),
+          color: Colors.black,
+          image: DecorationImage(
+            image: AssetImage(newsTypeModel.image!),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      child: Center(
-        child: Text(
-          newsTypeModel.newsTypeName!,
-          style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+        child: Center(
+          child: Text(
+            newsTypeModel.newsTypeName!,
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
