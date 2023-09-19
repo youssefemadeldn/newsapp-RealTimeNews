@@ -20,7 +20,7 @@ class NewsTypeListView extends StatelessWidget {
       image: 'assets/science.avif',
     ),
     NewsTypeModel(
-      newsTypeName: 'Entertaiment',
+      newsTypeName: 'Entertainment',
       image: 'assets/entertaiment.avif',
     ),
     NewsTypeModel(

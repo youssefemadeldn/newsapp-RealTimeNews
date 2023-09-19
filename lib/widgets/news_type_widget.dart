@@ -17,7 +17,7 @@ class NewsType extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const NewsTypeView();
+              return NewsTypeView(category: newsTypeModel.newsTypeName);
             },
           ),
         );
