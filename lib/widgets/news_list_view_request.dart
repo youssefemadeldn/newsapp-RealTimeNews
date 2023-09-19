@@ -4,17 +4,43 @@ import 'package:newsapp/models/news_model.dart';
 import 'package:newsapp/servcies/news_services.dart';
 import 'package:newsapp/widgets/news_list_view.dart';
 
-class NewsListViewRequest extends StatelessWidget {
+class NewsListViewRequest extends StatefulWidget {
   NewsListViewRequest({super.key});
-  final List<NewsModel> articles = [];
+
+  @override
+  State<NewsListViewRequest> createState() => _NewsListViewRequestState();
+}
+
+class _NewsListViewRequestState extends State<NewsListViewRequest> {
+  Future<List<NewsModel>>? future;
+  @override
+  void initState() {
+    super.initState();
+    future = NewsService(Dio()).getService();
+  }
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: NewsService(Dio()).getService(),
-        builder: (context, snapshot) {
-          return NewsListView(articales: snapshot.data ?? []);
-        });
+      future: future,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return NewsListView(articales: snapshot.data!);
+        } else if (snapshot.hasError) {
+          return const SliverToBoxAdapter(
+            child: Text('oops there an error, try later'),
+          );
+        } else {
+          return const SliverToBoxAdapter(
+            child: Align(
+                // alignment: Alignment.center,
+                widthFactor: 10,
+                heightFactor: 14,
+                child: CircularProgressIndicator()),
+          );
+        }
+      },
+    );
   }
 }
 
