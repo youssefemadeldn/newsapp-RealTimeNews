@@ -12,9 +12,9 @@ class News extends StatelessWidget {
           height: 200,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.0),
-            color: Colors.blueAccent,
+            // color: Colors.blueAccent,
             image: DecorationImage(
-              image: AssetImage(newsModel.image ?? ''),
+              image: NetworkImage(newsModel.image ?? ''),
               fit: BoxFit.fill,
             ),
           ),
