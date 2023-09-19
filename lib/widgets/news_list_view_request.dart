@@ -16,7 +16,7 @@ class _NewsListViewRequestState extends State<NewsListViewRequest> {
   @override
   void initState() {
     super.initState();
-    future = NewsService(Dio()).getService();
+    future = NewsService(Dio()).getTopHeadlines(category: 'general');
   }
 
   @override
