@@ -14,14 +14,14 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'News',
+              'RealTime',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              'Cloud',
+              'News ',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
         child: CustomScrollView(
           slivers: [
-            Popular(),
+            Explore(),
             NewsTypeListView(),
             SliverToBoxAdapter(
               child: SizedBox(

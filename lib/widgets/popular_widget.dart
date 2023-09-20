@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Popular extends StatelessWidget {
-  const Popular({
+class Explore extends StatelessWidget {
+  const Explore({
     super.key,
   });
 
@@ -11,7 +11,7 @@ class Popular extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(left: 8),
         child: Text(
-          'Popular',
+          'Explore',
           style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
         ),
       ),

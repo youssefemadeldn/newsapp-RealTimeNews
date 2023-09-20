@@ -8,32 +8,32 @@ class NewsTypeListView extends StatelessWidget {
   });
   final List<NewsTypeModel> newsType = const [
     NewsTypeModel(
-      newsTypeName: 'General',
-      image: 'assets/general.avif',
+      newsTypeName: 'general',
+      image: 'assets/Pgeneral.jpg',
     ),
     NewsTypeModel(
       newsTypeName: 'Business',
-      image: 'assets/business.avif',
+      image: 'assets/Pbussniss.jpg',
     ),
     NewsTypeModel(
       newsTypeName: 'Science',
-      image: 'assets/science.avif',
+      image: 'assets/zscience.jpg',
     ),
     NewsTypeModel(
       newsTypeName: 'Entertainment',
-      image: 'assets/entertaiment.avif',
+      image: 'assets/Pentertainment.jpg',
     ),
     NewsTypeModel(
       newsTypeName: 'Health',
-      image: 'assets/health.avif',
+      image: 'assets/PHealthNews.jpg',
     ),
     NewsTypeModel(
       newsTypeName: 'Sports',
-      image: 'assets/sports.avif',
+      image: 'assets/Psports.jpg',
     ),
     NewsTypeModel(
       newsTypeName: 'Technology',
-      image: 'assets/technology.jpeg',
+      image: 'assets/Ptechnologe.jpg',
     ),
   ];
 
